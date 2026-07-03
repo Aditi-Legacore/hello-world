@@ -12,17 +12,17 @@ jobs:
 
     steps:
       - name: Pull latest image
-        run: docker pull nandy857/hello-world:latest
+        run: sudo docker pull nandy857/hello-world:latest
 
       - name: Remove old container
-        run: docker rm -f hello-world-container || true
+        run: sudo docker rm -f hello-world-container || true
 
       - name: Start new container
         run: |
-          docker run -d \
+          sudo docker run -d \
             -p 8080:8080 \
             --name hello-world-container \
             nandy857/hello-world:latest
 
       - name: Show running containers
-        run: docker ps
+        run: sudo docker ps

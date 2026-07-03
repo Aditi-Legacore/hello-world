@@ -20,7 +20,7 @@ jobs:
       - name: Start new container
         run: |
           sudo docker run -d \
-            -p 8080:8080 \
+            -p 3000:3000 \
             --name hello-world-container \
             nandy857/hello-world:latest
 
